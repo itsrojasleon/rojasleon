@@ -9,22 +9,20 @@ const Nav = (props: Props) => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
 
   return (
-    <nav
-      className={
-        (props.transparent
-          ? 'top-0 absolute z-50 w-full'
-          : 'relative shadow-lg bg-white shadow-lg') +
-        ' flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg'
-      }>
+    <nav className="relative shadow-lg bg-white shadow-lg flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-          <img
-            width="54"
-            height="54"
-            src="https://i.imgur.com/FmUZg5p.png"
-            alt="rojasleon"
-            className="rounded"
-          />
+          <Link href="/">
+            <a>
+              <img
+                width="54"
+                height="54"
+                src="https://i.imgur.com/FmUZg5p.png"
+                alt="rojasleon"
+                className="rounded"
+              />
+            </a>
+          </Link>
           <button
             className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
             type="button"
@@ -40,24 +38,25 @@ const Nav = (props: Props) => {
           id="example-navbar-warning">
           <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
             <li className="flex items-center">
-              <a className="text-gray-800 hover:text-gray-600 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold">
-                <i className="text-gray-500 fab fa-facebook text-lg leading-lg" />
-                <span className="lg:hidden inline-block ml-2">Share</span>
-              </a>
+              <Link href="/about">
+                <a className="ml-8 text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">
+                  <span className="inline-block">About</span>
+                </a>
+              </Link>
             </li>
 
             <li className="flex items-center">
-              <a className="text-gray-800 hover:text-gray-600 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold">
-                <i className="text-gray-500 fab fa-twitter text-lg leading-lg" />
-                <span className="lg:hidden inline-block ml-2">Tweet</span>
-              </a>
+              <Link href="/portfolio">
+                <a className="ml-8 text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">
+                  <span className="inline-block">Portfolio</span>
+                </a>
+              </Link>
             </li>
 
             <li className="flex items-center">
               <Link href="/blog">
-                <a className="text-gray-800 hover:text-gray-600 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold">
-                  <i className="text-gray-500 fab fa-github text-lg leading-lg" />
-                  <span className="lg:hidden inline-block ml-2">Star</span>
+                <a className="ml-8 text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">
+                  <span className="inline-block">Blog</span>
                 </a>
               </Link>
             </li>
