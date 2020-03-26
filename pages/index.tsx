@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
+import Subtitle from '../components/Subtitle';
 
 const Home = () => (
   <>
@@ -9,7 +10,7 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Layout>
-      <h1>Hello there</h1>
+      <Subtitle subtitle="Hello there" />
     </Layout>
   </>
 );

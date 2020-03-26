@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
+import Subtitle from '../components/Subtitle';
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
         <title>About | rojasleon</title>
       </Head>
       <Layout>
-        <h1>About page</h1>
+        <Subtitle subtitle="Hey again" />
       </Layout>
     </>
   );

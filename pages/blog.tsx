@@ -1,11 +1,12 @@
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
-import { GetStaticPaths, GetStaticProps } from 'next';
 import Layout from '../components/Layout';
 import matter from 'gray-matter';
+import Subtitle from '../components/Subtitle';
 
 interface IBlog {
   title: string;
@@ -24,6 +25,7 @@ const Blog = ({ data }: Props) => {
         <title>Blog | rojasleon</title>
       </Head>
       <Layout>
+        <Subtitle subtitle="Blog" />
         <div>
           {data.map(info => (
             <div key={info.title}>
@@ -45,6 +47,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       slug: filename.replace('.md', '')
     }
   }));
+
   return {
     paths,
     fallback: false
@@ -58,7 +61,6 @@ export const getStaticProps: GetStaticProps = async () => {
   for (let file of files) {
     const singleFile = fs.readFileSync(path.join('posts', file)).toString();
     const parsedMarkdown = matter(singleFile);
-    // file.replace('.md', '')
     metadata.push({ ...parsedMarkdown.data, route: file.replace('.md', '') });
   }
 
