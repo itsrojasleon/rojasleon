@@ -3,6 +3,7 @@ title: 'Emaily'
 description: 'Something'
 path: '/portfolio/emaily'
 image: 'https://i.imgur.com/djOtu2N.png'
+languages: ['Javascript']
 website: 'https://server-with-node.herokuapp.com'
 github: 'https://github.com/rojasleon/emaily'
 author: 'rojasleon'

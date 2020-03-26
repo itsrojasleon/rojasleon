@@ -3,6 +3,7 @@ title: 'The coding interview bootcamp'
 description: 'The coding dude'
 path: '/portfolio/the-coding-interview-bootcamp'
 image: 'https://i.imgur.com/J4345gK.png'
+languages: ['Javascript']
 website: 'https://the-coding-interview-bootcamp.netlify.com'
 github: 'https://github.com/rojasleon/the-coding-interview-bootcamp'
 author: 'rojasleon'
