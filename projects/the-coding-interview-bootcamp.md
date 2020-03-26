@@ -1,6 +1,6 @@
 ---
 title: 'The coding interview bootcamp'
-description: 'The coding dude'
+description: 'Ace your next Javascript coding interview by mastering data structures and algorithms.'
 path: '/portfolio/the-coding-interview-bootcamp'
 image: 'https://i.imgur.com/J4345gK.png'
 languages: ['Javascript']

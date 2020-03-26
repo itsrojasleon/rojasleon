@@ -1,6 +1,6 @@
 ---
 title: 'Emaily'
-description: 'Something'
+description: 'Send emails to people of your interest.'
 path: '/portfolio/emaily'
 image: 'https://i.imgur.com/djOtu2N.png'
 languages: ['Javascript']
