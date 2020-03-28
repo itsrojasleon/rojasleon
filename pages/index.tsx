@@ -11,7 +11,7 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Layout>
-      <div className="xl:w-8/12 lg-w/12 md:w-10/12 sm:w-full m-auto flex justify-center flex-col">
+      <>
         <Subtitle subtitle="Hello, I'm Luis!" />
         <Description job="Software Developer (Javascript and Typescript)">
           I'm constantly learning new things about this world (most of the time
@@ -53,7 +53,7 @@ const Home = () => (
           </a>{' '}
           to see what I'm doing right now.
         </Description>
-      </div>
+      </>
     </Layout>
   </>
 );
