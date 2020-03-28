@@ -21,7 +21,7 @@ const Portfolio = ({ data }: Props) => {
       </Head>
       <Layout>
         <Subtitle subtitle="Portfollio" />
-        <div className="m-auto grid gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+        <div className="m-auto grid gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
           {data.map(info => (
             <Card key={info.title} {...info} />
           ))}
