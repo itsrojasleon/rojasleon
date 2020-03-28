@@ -12,7 +12,7 @@ const Card = ({
   website
 }: IPortfolio) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg mb-8">
       <Link href={`/portfolio/${route}`}>
         <a>
           <img className="w-full" src={image} />

@@ -20,8 +20,8 @@ const Portfolio = ({ data }: Props) => {
         <title>Portfolio | rojasleon</title>
       </Head>
       <Layout>
-        <Subtitle subtitle="Portfolio" />
-        <div className="flex flex-wrap items-center justify-between">
+        <Subtitle subtitle="Portfollio" />
+        <div className="m-auto grid gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           {data.map(info => (
             <Card key={info.title} {...info} />
           ))}

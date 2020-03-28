@@ -7,7 +7,7 @@ interface Props {
 
 const Subtitle = ({ subtitle, icon }: Props) => {
   return (
-    <h1 className="text-4xl font-medium">
+    <h1 className="mb-8 text-4xl font-bold">
       {subtitle} {icon}
     </h1>
   );
