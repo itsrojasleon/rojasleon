@@ -11,12 +11,48 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Layout>
-      <div className=" flex justify-center flex-col">
-        <Subtitle subtitle="Hello, I'm Luis Rojas!" icon="👋" />
-        <Description
-          job="Software Developer (Javascript, Typescript and I can write a little bit of Python and Go code)"
-          description="I'm constantly learning new things about this world (most of the time I'm reading and writing code, but it is also important improve as a person)"
-        />
+      <div className="xl:w-8/12 lg-w/12 md:w-10/12 sm:w-full m-auto flex justify-center flex-col">
+        <Subtitle subtitle="Hello, I'm Luis!" />
+        <Description job="Software Developer (Javascript and Typescript)">
+          I'm constantly learning new things about this world (most of the time
+          I'm reading and writing code, but it is also important improve as a
+          person). Please visit my{' '}
+          <a
+            className="text-blue-600"
+            href="https://github.com/rojasleon"
+            target="_blank">
+            Github
+          </a>{' '}
+          ||{' '}
+          <a
+            className="text-blue-600"
+            href="https://codesandbox.io/u/rojasleon"
+            target="_blank">
+            Codesandbox
+          </a>{' '}
+          ||{' '}
+          <a
+            className="text-blue-600"
+            href="https://glitch.com/@rojasleon"
+            target="_blank">
+            Glitch
+          </a>{' '}
+          ||{' '}
+          <a
+            className="text-blue-600"
+            href="https://www.codewars.com/users/rojasleon"
+            target="_blank">
+            Codewars
+          </a>{' '}
+          or{' '}
+          <a
+            className="text-blue-600"
+            href="https://www.hackerrank.com/rojasleon"
+            target="_blank">
+            Hackerrank
+          </a>{' '}
+          to see what I'm doing right now.
+        </Description>
       </div>
     </Layout>
   </>

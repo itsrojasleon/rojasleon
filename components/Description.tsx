@@ -1,15 +1,17 @@
 import React from 'react';
 
 interface Props {
-  description: string;
   job?: string;
+  children: React.ReactNode;
 }
 
-const Description = ({ description, job }: Props) => {
+const Description = ({ job, children }: Props) => {
   return (
     <>
       <h2 className="mb-8 text-2xl font-medium">{job}</h2>
-      <p className="text-xl text-gray-600 font-light">{description}</p>
+      <p className="leading-relaxed text-xl text-gray-600 font-light">
+        {children}
+      </p>
     </>
   );
 };
