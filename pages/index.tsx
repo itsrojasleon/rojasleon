@@ -12,8 +12,8 @@ const Home = () => (
     </Head>
     <Layout>
       <>
-        <Subtitle subtitle="~ Hello, I'm Luis!" />
-        <Description job="- Software Developer (Javascript and Typescript).">
+        <Subtitle subtitle="Hello, I'm Luis!" />
+        <Description job="~ Software Developer (Javascript and Typescript).">
           I'm constantly learning new things about this world (most of the time
           I'm reading and writing code, but it is also important improve as a
           person). Please visit my{' '}

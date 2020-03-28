@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="relative border-t border-gray-300 flex flex-wrap items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <footer className="relative border-t border-gray-200 flex flex-wrap items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
       <div className="flex flex-col items-center text-gray-500">
         <span>Juan Luis Rojas León - 2020</span>
         <a
