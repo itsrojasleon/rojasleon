@@ -20,7 +20,7 @@ const Portfolio = ({ data }: Props) => {
         <title>Portfolio | rojasleon</title>
       </Head>
       <Layout>
-        <Subtitle subtitle="Portfollio" />
+        <Subtitle subtitle="Portfolio" />
         <div className="m-auto grid gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
           {data.map(info => (
             <Card key={info.title} {...info} />
