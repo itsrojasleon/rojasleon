@@ -8,14 +8,14 @@ import Layout from '../../components/Layout';
 import matter from 'gray-matter';
 import Subtitle from '../../components/Subtitle';
 
-interface IBlog {
+interface Blog {
   title: string;
   description: string;
   route: string;
 }
 
 interface Props {
-  data: IBlog[];
+  data: Blog[];
 }
 
 const Blog = ({ data }: Props) => {
