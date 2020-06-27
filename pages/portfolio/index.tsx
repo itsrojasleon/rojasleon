@@ -2,37 +2,28 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Link from 'next/link';
 import Head from 'next/head';
-import Layout from '../components/Layout';
+import Layout from '../../components/Layout';
 import matter from 'gray-matter';
-import Subtitle from '../components/Subtitle';
-
-interface IBlog {
-  title: string;
-  description: string;
-  route: string;
-}
+import Subtitle from '../../components/Subtitle';
+import Card from '../../components/Card';
+import { IPortfolio } from '../../interfaces/Portfolio';
 
 interface Props {
-  data: IBlog[];
+  data: IPortfolio[];
 }
 
-const Blog = ({ data }: Props) => {
+const Portfolio = ({ data }: Props) => {
   return (
     <>
       <Head>
-        <title>Blog | rojasleon</title>
+        <title>Portfolio | rojasleon</title>
       </Head>
       <Layout>
-        <Subtitle subtitle="Blog" />
-        <div>
-          {data.map(info => (
-            <div key={info.title}>
-              <Link href={`/blog/${info.route}`}>
-                <a>{info.title}</a>
-              </Link>
-            </div>
+        <Subtitle subtitle="Portfolio" />
+        <div className="m-auto grid gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+          {data.map((info) => (
+            <Card key={info.title} {...info} />
           ))}
         </div>
       </Layout>
@@ -41,8 +32,8 @@ const Blog = ({ data }: Props) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const files = fs.readdirSync('posts');
-  const paths = files.map(filename => ({
+  const files = fs.readdirSync('projects');
+  const paths = files.map((filename) => ({
     params: {
       slug: filename.replace('.md', '')
     }
@@ -55,11 +46,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const files = fs.readdirSync('posts');
+  const files = fs.readdirSync('projects');
   const metadata = [];
 
   for (let file of files) {
-    const singleFile = fs.readFileSync(path.join('posts', file)).toString();
+    const singleFile = fs.readFileSync(path.join('projects', file)).toString();
     const parsedMarkdown = matter(singleFile);
     metadata.push({ ...parsedMarkdown.data, route: file.replace('.md', '') });
   }
@@ -71,4 +62,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default Blog;
+export default Portfolio;
