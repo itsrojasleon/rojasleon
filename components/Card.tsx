@@ -12,7 +12,7 @@ const Card = ({
   website
 }: IPortfolio) => {
   return (
-    <div className=" rounded overflow-hidden shadow-lg mb-6">
+    <div className=" rounded overflow-hidden shadow mb-6">
       <Link href="/portfolio/[slug]" as={`/portfolio/${route}`}>
         <a>
           <img className="w-full" src={image} />
@@ -40,7 +40,7 @@ const Card = ({
         {languages.map((lan) => (
           <span
             key={lan}
-            className="inline-block bg-pink-200 rounded-full px-3 py-1 text-sm font-medium text-pink-700">
+            className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-medium text-blue-800">
             {lan}
           </span>
         ))}
@@ -48,4 +48,5 @@ const Card = ({
     </div>
   );
 };
+
 export default Card;
