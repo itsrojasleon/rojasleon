@@ -5,7 +5,6 @@ import matter from 'gray-matter';
 import marked from 'marked';
 import fs from 'fs';
 import path from 'path';
-import Layout from '../../components/Layout';
 
 const Post = ({ htmlString, data }) => {
   return (
@@ -14,18 +13,16 @@ const Post = ({ htmlString, data }) => {
         <title>{data.title}</title>
         <meta title="description" content={data.description} />
       </Head>
-      <Layout>
-        <div className="markdown">
-          <div dangerouslySetInnerHTML={{ __html: htmlString }} />
-        </div>
-      </Layout>
+      <div className="markdown">
+        <div dangerouslySetInnerHTML={{ __html: htmlString }} />
+      </div>
     </>
   );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const files = fs.readdirSync('posts');
-  const paths = files.map(filename => ({
+  const paths = files.map((filename) => ({
     params: {
       slug: filename.replace('.md', '')
     }

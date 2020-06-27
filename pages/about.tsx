@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/Layout';
 import Subtitle from '../components/Subtitle';
 
 const About = () => {
@@ -9,10 +8,9 @@ const About = () => {
       <Head>
         <title>About | rojasleon</title>
       </Head>
-      <Layout>
-        <Subtitle subtitle="Hey again" />
-      </Layout>
+      <Subtitle subtitle="Hey again" />
     </>
   );
 };
+
 export default About;

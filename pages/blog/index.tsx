@@ -1,10 +1,9 @@
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
-import Layout from '../../components/Layout';
 import matter from 'gray-matter';
 import Subtitle from '../../components/Subtitle';
 
@@ -15,58 +14,43 @@ interface Blog {
 }
 
 interface Props {
-  data: Blog[];
+  posts: Blog[];
 }
 
-const Blog = ({ data }: Props) => {
+const Blog = ({ posts }: Props) => {
   return (
     <>
       <Head>
         <title>Blog | rojasleon</title>
       </Head>
-      <Layout>
-        <Subtitle subtitle="Blog" />
-        <div>
-          {data.map((info) => (
-            <div key={info.title}>
-              <Link href={`/blog/${info.route}`}>
-                <a>{info.title}</a>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </Layout>
+      <Subtitle subtitle="Blog" />
+      <div>
+        {posts.map((info) => (
+          <div key={info.title}>
+            <Link href="/blog/[slug]" as={`/blog/${info.route}`}>
+              <a>{info.title}</a>
+            </Link>
+          </div>
+        ))}
+      </div>
     </>
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const files = fs.readdirSync('posts');
-  const paths = files.map((filename) => ({
-    params: {
-      slug: filename.replace('.md', '')
-    }
-  }));
-
-  return {
-    paths,
-    fallback: false
-  };
-};
-
 export const getStaticProps: GetStaticProps = async () => {
-  const files = fs.readdirSync('posts');
-  const metadata = [];
+  const postsDirectory = path.join(process.cwd(), 'posts');
+  const filenames = fs.readdirSync(postsDirectory);
 
-  for (let file of files) {
-    const singleFile = fs.readFileSync(path.join('posts', file)).toString();
-    const parsedMarkdown = matter(singleFile);
-    metadata.push({ ...parsedMarkdown.data, route: file.replace('.md', '') });
-  }
+  const posts = filenames.map((filename) => {
+    const file = fs.readFileSync(path.join('posts', filename)).toString();
+    const parsedMarkdown = matter(file);
+
+    return { ...parsedMarkdown.data, route: filename.replace('.md', '') };
+  });
 
   return {
     props: {
-      data: metadata
+      posts
     }
   };
 };

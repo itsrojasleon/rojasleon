@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
-import Layout from '../../components/Layout';
 import matter from 'gray-matter';
 import Subtitle from '../../components/Subtitle';
 import Card from '../../components/Card';
@@ -19,14 +18,12 @@ const Portfolio = ({ data }: Props) => {
       <Head>
         <title>Portfolio | rojasleon</title>
       </Head>
-      <Layout>
-        <Subtitle subtitle="Portfolio" />
-        <div className="m-auto grid gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
-          {data.map((info) => (
-            <Card key={info.title} {...info} />
-          ))}
-        </div>
-      </Layout>
+      <Subtitle subtitle="Portfolio" />
+      <div className="m-auto grid gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+        {data.map((info) => (
+          <Card key={info.title} {...info} />
+        ))}
+      </div>
     </>
   );
 };
