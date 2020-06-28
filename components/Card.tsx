@@ -25,13 +25,11 @@ const Card = ({
       <div className="px-6 py-4 flex flex-wrap items-center justify-between">
         <a href={github} target="_blank">
           <button className="bg-transparent hover:bg-black text-black-700 font-semibold hover:text-white py-2 px-4 border border-black-800 hover:border-transparent rounded">
-            <i className="text-xl fab fa-github cursor-pointer w-4 h-4 mr-3"></i>
             <span>Code</span>
           </button>
         </a>
         <a href={website} target="_blank">
           <button className="bg-transparent hover:bg-black text-black-700 font-semibold hover:text-white py-2 px-4 border border-black-800 hover:border-transparent rounded">
-            <i className="text-xl fas fa-search cursor-pointer w-4 h-4 mr-3"></i>
             <span>Preview</span>
           </button>
         </a>
@@ -40,7 +38,7 @@ const Card = ({
         {languages.map((lan) => (
           <span
             key={lan}
-            className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-medium text-blue-800">
+            className="inline-block bg-yellow-200 rounded-full px-3 py-1 text-sm font-medium text-yellow-800">
             {lan}
           </span>
         ))}

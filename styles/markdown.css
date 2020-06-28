@@ -64,11 +64,11 @@
 }
 
 .markdown code {
-  @apply font-mono text-sm inline bg-gray-200 rounded px-2 py-1;
+  @apply font-mono text-sm inline bg-gray-100 text-yellow-800 rounded px-2 py-1;
 }
 
 .markdown pre {
-  @apply bg-gray-200 rounded p-4 my-2;
+  @apply bg-gray-100 rounded p-4 my-2;
 }
 
 .markdown pre code {

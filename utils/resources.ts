@@ -24,7 +24,7 @@ export const getResources = (resource: string) => {
 
 export const getResource = (resource: string, slug: string[] | string) => {
   const markdownWithMetadata = fs
-    .readFileSync(path.join('posts', slug + '.md'))
+    .readFileSync(path.join(resource, slug + '.md'))
     .toString();
 
   const parsedMarkdown = matter(markdownWithMetadata);
@@ -34,7 +34,7 @@ export const getResource = (resource: string, slug: string[] | string) => {
 };
 
 export const getPaths = (resource: string) => {
-  const files = fs.readdirSync('posts');
+  const files = fs.readdirSync(resource);
   const paths = files.map((filename) => ({
     params: {
       slug: filename.replace('.md', '')
