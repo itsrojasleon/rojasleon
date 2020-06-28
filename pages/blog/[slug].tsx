@@ -1,10 +1,7 @@
 import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
-import matter from 'gray-matter';
-import marked from 'marked';
-import fs from 'fs';
-import path from 'path';
+import { getResource, getPaths, Resources } from '../../utils/resources';
 
 const Post = ({ htmlString, data }) => {
   return (
@@ -21,12 +18,7 @@ const Post = ({ htmlString, data }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const files = fs.readdirSync('posts');
-  const paths = files.map((filename) => ({
-    params: {
-      slug: filename.replace('.md', '')
-    }
-  }));
+  const paths = getPaths(Resources.Posts);
 
   return {
     paths,
@@ -35,12 +27,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
-  const markdownWithMetadata = fs
-    .readFileSync(path.join('posts', slug + '.md'))
-    .toString();
-
-  const parsedMarkdown = matter(markdownWithMetadata);
-  const htmlString = marked(parsedMarkdown.content);
+  const { htmlString, parsedMarkdown } = getResource(Resources.Posts, slug);
 
   return {
     props: {

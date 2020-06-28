@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { IPortfolio } from '../interfaces/Portfolio';
+import { Project } from '../pages/portfolio/index';
 
 const Card = ({
   title,
@@ -10,7 +10,7 @@ const Card = ({
   languages,
   github,
   website
-}: IPortfolio) => {
+}: Project) => {
   return (
     <div className=" rounded overflow-hidden shadow mb-6">
       <Link href="/portfolio/[slug]" as={`/portfolio/${route}`}>

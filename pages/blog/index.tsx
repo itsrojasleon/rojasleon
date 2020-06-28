@@ -1,11 +1,9 @@
 import React from 'react';
-import fs from 'fs';
 import { GetStaticProps } from 'next';
-import path from 'path';
 import Link from 'next/link';
 import Head from 'next/head';
-import matter from 'gray-matter';
 import Subtitle from '../../components/Subtitle';
+import { getResources, Resources } from '../../utils/resources';
 
 interface Blog {
   title: string;
@@ -36,15 +34,7 @@ const Blog = ({ posts }: Props) => (
 );
 
 export const getStaticProps: GetStaticProps = async () => {
-  const postsDirectory = path.join(process.cwd(), 'posts');
-  const filenames = fs.readdirSync(postsDirectory);
-
-  const posts = filenames.map((filename) => {
-    const file = fs.readFileSync(path.join('posts', filename)).toString();
-    const parsedMarkdown = matter(file);
-
-    return { ...parsedMarkdown.data, route: filename.replace('.md', '') };
-  });
+  const posts = getResources(Resources.Posts);
 
   return {
     props: {
