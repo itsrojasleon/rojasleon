@@ -13,7 +13,7 @@ const Post = ({ htmlString, data }) => {
         <title>{data.title}</title>
         <meta title="description" content={data.description} />
       </Head>
-      <div className="markdown">
+      <div className="markdown m-auto w-auto lg:w-8/12">
         <div dangerouslySetInnerHTML={{ __html: htmlString }} />
       </div>
     </>

@@ -8,8 +8,8 @@ interface Props {
 const Description = ({ job, children }: Props) => {
   return (
     <>
-      <h2 className="text-xl font-light text-gray-600">{job}</h2>
-      <p className="leading-relaxed text-xl text-gray-500 font-light text-justify">
+      <h2 className="text-2xl font-light text-gray-900">{job}</h2>
+      <p className="leading-relaxed text-xl text-gray-600 font-light text-justify">
         {children}
       </p>
     </>

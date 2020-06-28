@@ -10,8 +10,8 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <>
-      <Subtitle subtitle="Hi, I'm Luis!" />
-      <Description job="~ Software Developer (Javascript and Typescript).">
+      <Subtitle subtitle="Hello, I'm Luis!" />
+      <Description job="I'm a software developer">
         I'm constantly learning new things about this world (most of the time
         I'm reading and writing code, but it is also important improve as a
         person). Please visit my{' '}

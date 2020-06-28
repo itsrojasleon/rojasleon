@@ -23,15 +23,15 @@ const Blog = ({ posts }: Props) => (
       <title>Blog | rojasleon</title>
     </Head>
     <Subtitle subtitle="Blog" />
-    <div>
+    <ul className="list-disc">
       {posts.map((info) => (
-        <div key={info.title}>
+        <li key={info.title}>
           <Link href="/blog/[slug]" as={`/blog/${info.route}`}>
-            <a>{info.title}</a>
+            <a className="hover:underline text-xl">{info.title}</a>
           </Link>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   </>
 );
 
