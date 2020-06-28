@@ -9,9 +9,8 @@ const Home = () => (
       <title>Home | rojasleon</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
     <>
-      <Subtitle subtitle="Hello, I'm Luis!" />
+      <Subtitle subtitle="Hi, I'm Luis!" />
       <Description job="~ Software Developer (Javascript and Typescript).">
         I'm constantly learning new things about this world (most of the time
         I'm reading and writing code, but it is also important improve as a

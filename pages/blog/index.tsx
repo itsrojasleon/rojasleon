@@ -1,7 +1,7 @@
 import React from 'react';
 import fs from 'fs';
-import path from 'path';
 import { GetStaticProps } from 'next';
+import path from 'path';
 import Link from 'next/link';
 import Head from 'next/head';
 import matter from 'gray-matter';
@@ -17,25 +17,23 @@ interface Props {
   posts: Blog[];
 }
 
-const Blog = ({ posts }: Props) => {
-  return (
-    <>
-      <Head>
-        <title>Blog | rojasleon</title>
-      </Head>
-      <Subtitle subtitle="Blog" />
-      <div>
-        {posts.map((info) => (
-          <div key={info.title}>
-            <Link href="/blog/[slug]" as={`/blog/${info.route}`}>
-              <a>{info.title}</a>
-            </Link>
-          </div>
-        ))}
-      </div>
-    </>
-  );
-};
+const Blog = ({ posts }: Props) => (
+  <>
+    <Head>
+      <title>Blog | rojasleon</title>
+    </Head>
+    <Subtitle subtitle="Blog" />
+    <div>
+      {posts.map((info) => (
+        <div key={info.title}>
+          <Link href="/blog/[slug]" as={`/blog/${info.route}`}>
+            <a>{info.title}</a>
+          </Link>
+        </div>
+      ))}
+    </div>
+  </>
+);
 
 export const getStaticProps: GetStaticProps = async () => {
   const postsDirectory = path.join(process.cwd(), 'posts');
