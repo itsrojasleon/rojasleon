@@ -9,6 +9,7 @@ interface Blog {
   title: string;
   description: string;
   route: string;
+  date: string;
 }
 
 interface Props {
@@ -27,6 +28,7 @@ const Blog = ({ posts }: Props) => (
           <Link href="/blog/[slug]" as={`/blog/${info.route}`}>
             <a className="hover:underline text-xl">{info.title}</a>
           </Link>
+          <span className="text-gray-500 ml-2">({info.date})</span>
         </li>
       ))}
     </ul>
@@ -35,6 +37,8 @@ const Blog = ({ posts }: Props) => (
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getResources(Resources.Posts);
+
+  console.log(posts);
 
   return {
     props: {
