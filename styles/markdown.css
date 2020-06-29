@@ -64,15 +64,15 @@
 }
 
 .markdown code {
-  @apply font-mono text-sm inline bg-gray-100 text-yellow-800 rounded px-2 py-1;
+  @apply font-mono text-sm inline bg-red-100 text-red-500 font-semibold rounded px-2 py-1;
 }
 
 .markdown pre {
-  @apply bg-gray-100 rounded p-4 my-2;
+  @apply bg-gray-100 text-purple-400 rounded p-4 my-2;
 }
 
 .markdown pre code {
-  @apply block bg-transparent p-0 overflow-visible rounded-none;
+  @apply block bg-transparent text-black font-semibold p-0 overflow-visible rounded-none;
 }
 
 .markdown ul {
