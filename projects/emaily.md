@@ -2,7 +2,7 @@
 title: 'Emaily'
 description: 'Send emails to people of your interest.'
 path: '/portfolio/emaily'
-image: 'https://i.imgur.com/djOtu2N.png'
+image: '/projects/emaily.png'
 languages: ['Javascript']
 website: 'https://server-with-node.herokuapp.com'
 github: 'https://github.com/rojasleon/emaily'
@@ -11,7 +11,7 @@ author: 'rojasleon'
 
 Send emails to people of your interest.
 
-![Emaily](https://i.imgur.com/djOtu2N.png)
+![Emaily](/projects/emaily.png)
 
 #### Technologies
 

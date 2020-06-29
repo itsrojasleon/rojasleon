@@ -2,7 +2,7 @@
 title: 'Search Music v2'
 description: 'Search your favorite song by Spotify API (v2).'
 path: '/portfolio/search-music-v2'
-image: 'https://i.imgur.com/AEIC0FX.png'
+image: '/projects/search-music.png'
 languages: ['Javascript']
 website: 'https://search-music.herokuapp.com'
 github: 'https://github.com/rojasleon/search-music'
@@ -10,6 +10,8 @@ author: 'rojasleon'
 ---
 
 - Search your favorite song by Spotify API (v2).
+
+![Search Music v2](/projects/search-music.png)
 
 #### Technologies
 

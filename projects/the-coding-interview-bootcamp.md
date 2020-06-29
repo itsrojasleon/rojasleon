@@ -2,7 +2,7 @@
 title: 'The coding interview bootcamp'
 description: 'Ace your next Javascript coding interview by mastering data structures and algorithms.'
 path: '/portfolio/the-coding-interview-bootcamp'
-image: 'https://i.imgur.com/J4345gK.png'
+image: '/projects/the-coding-interview-bootcamp.png'
 languages: ['Javascript']
 website: 'https://the-coding-interview-bootcamp.netlify.com'
 github: 'https://github.com/rojasleon/the-coding-interview-bootcamp'
@@ -10,6 +10,8 @@ author: 'rojasleon'
 ---
 
 Ace your next Javascript coding interview by mastering data structures and algorithms.
+
+![Search Music v2](/projects/the-coding-interview-bootcamp.png)
 
 #### Technologies
 
