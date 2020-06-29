@@ -13,7 +13,9 @@ const Header = (props: Props) => {
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Blog', href: '/blog' }
   ].map(({ label, href }) => (
-    <li key={label} className="flex items-center">
+    <li
+      key={label}
+      className="flex items-center hover:bg-gray-200 pt-2 pb-2 border-t border-gray-200 cursor-pointer lg:border-none lg:hover:bg-transparent">
       <Link href={href}>
         <a className="ml-8 text-black hover:text-blue-600 focus:outline-none transition duration-150">
           <span className="inline-block">{label}</span>
@@ -48,8 +50,7 @@ const Header = (props: Props) => {
           className={
             'lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none' +
             (navbarOpen ? ' block rounded' : ' hidden')
-          }
-          id="example-navbar-warning">
+          }>
           <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
             {links}
           </ul>
