@@ -307,5 +307,3 @@ const AppComponent...
 ## Thanks for reading
 
 You can find the github repo [rojasleon](https://github.com/rojasleon/next-typescript-simple-blog) and the deployment [next-typescript-simple-blog](https://next-typescript-simple-blog.rojasleon.vercel.app/)
-
-<!-- You can find the github project [here](https://github.com/rojasleon/repo). -->
