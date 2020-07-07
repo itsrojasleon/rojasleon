@@ -7,7 +7,7 @@ const Project = ({ htmlString, data }) => {
   return (
     <div>
       <Head>
-        <title>{data.title}</title>
+        <title>{data.title} | rojasleon</title>
         <meta title="description" content={data.description} />
       </Head>
       <div className="markdown">

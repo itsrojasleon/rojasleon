@@ -38,12 +38,13 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        <Subtitle subtitle="Hello, I'm Luis!" />
+        <Subtitle subtitle="Hi, I'm Luis!" />
         <Description job="I'm a software developer.">
           Right now I'm using react, node, typescript, docker and kubernetes to
           develop apps. I'm learning about the cloud and I really would like to
-          learn about ethereum and self driving cars. Please visit my {links} to
-          see what I'm doing right now.
+          learn about ethereum and self driving cars... I know, it's hard, but
+          I'm pretty sure I can deal with that. Please visit my {links} to see
+          what I'm doing right now.
         </Description>
       </>
     </>

@@ -7,7 +7,7 @@ const Post = ({ htmlString, data }) => {
   return (
     <>
       <Head>
-        <title>{data.title}</title>
+        <title>{data.title} | rojasleon</title>
         <meta title="description" content={data.description} />
       </Head>
       <div className="markdown m-auto w-auto lg:w-8/12">

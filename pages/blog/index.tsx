@@ -38,8 +38,6 @@ const Blog = ({ posts }: Props) => (
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getResources(Resources.Posts);
 
-  console.log(posts);
-
   return {
     props: {
       posts
