@@ -1,7 +1,7 @@
 ---
 title: 'Learn how to create a blog using next js'
 description: 'Create a blog using next js, typescript and tailwindcss'
-date: '27-06-2020'
+date: 'June 27, 2020'
 ---
 
 # Building a blog using Next js, typescript and tailwindcss

@@ -16,7 +16,10 @@ export const getResources = (resource: string) => {
     const file = fs.readFileSync(path.join(resource, filename)).toString();
     const parsedMarkdown = matter(file);
 
-    return { ...parsedMarkdown.data, route: filename.replace('.md', '') };
+    return {
+      ...parsedMarkdown.data,
+      route: filename.replace('.md', '')
+    } as any;
   });
 
   return resources;

@@ -23,12 +23,12 @@ const Blog = ({ posts }: Props) => (
     </Head>
     <Subtitle subtitle="Blog" />
     <ul className="list-disc">
-      {posts.map((info) => (
-        <li key={info.title}>
-          <Link href="/blog/[slug]" as={`/blog/${info.route}`}>
-            <a className="hover:underline text-xl">{info.title}</a>
+      {posts.map((post) => (
+        <li key={post.title}>
+          <Link href="/blog/[slug]" as={`/blog/${post.route}`}>
+            <a className="text-xl hover:underline">{post.title}</a>
           </Link>
-          <span className="text-gray-500 ml-2">({info.date})</span>
+          <span className="text-gray-600 ml-2 font-light">{post.date}</span>
         </li>
       ))}
     </ul>
@@ -36,11 +36,13 @@ const Blog = ({ posts }: Props) => (
 );
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = getResources(Resources.Posts);
+  const posts: Blog[] = getResources(Resources.Posts);
 
   return {
     props: {
-      posts
+      posts: posts.sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      )
     }
   };
 };

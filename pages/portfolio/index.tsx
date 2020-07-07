@@ -13,6 +13,7 @@ export interface Project {
   languages: string[];
   github: string;
   website: string;
+  date: string;
 }
 
 interface Props {
@@ -36,11 +37,13 @@ const Portfolio = ({ projects }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const projects = getResources(Resources.Projects);
+  const projects: Project[] = getResources(Resources.Projects);
 
   return {
     props: {
-      projects
+      projects: projects.sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      )
     }
   };
 };

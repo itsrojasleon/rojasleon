@@ -1,7 +1,7 @@
 ---
 title: 'The coding interview bootcamp'
 description: 'Ace your next Javascript coding interview by mastering data structures and algorithms.'
-path: '/portfolio/the-coding-interview-bootcamp'
+date: 'October 07, 2019'
 image: '/projects/the-coding-interview-bootcamp.png'
 languages: ['Javascript']
 website: 'https://the-coding-interview-bootcamp.netlify.com'

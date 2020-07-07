@@ -1,7 +1,7 @@
 ---
 title: 'Concepts of Docker'
 description: 'A quick overview of Docker'
-date: '06-07-2020'
+date: 'July 06, 2020'
 ---
 
 # A quick introduction to docker

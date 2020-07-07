@@ -1,7 +1,7 @@
 ---
 title: 'Emaily'
 description: 'Send emails to people of your interest.'
-path: '/portfolio/emaily'
+date: 'November 09, 2019'
 image: '/projects/emaily.png'
 languages: ['Javascript']
 website: 'https://server-with-node.herokuapp.com'
