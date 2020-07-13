@@ -9,23 +9,25 @@ github: 'https://github.com/rojasleon/search-music'
 author: 'rojasleon'
 ---
 
-- Search your favorite song by Spotify API (v2).
+# Search Music
+
+Search your favorite song by Spotify API (v2).
 
 ![Search Music v2](/projects/search-music.png)
 
 #### Technologies
 
-- [x] React
-  - [x] Redux
-  - [x] Hooks
-  - [x] Axios
-  - [x] Styled Components
-- [x] Node
-  - [x] Express
-  - [x] Passport
-- [x] MongoDB
-  - [x] Mongoose
-- [x] Heroku
+- React
+- Redux
+- Hooks
+- Axios
+- Styled Components
+- Node
+- Express
+- Passport
+- MongoDB
+- Mongoose
+- Heroku
 
 #### Links
 

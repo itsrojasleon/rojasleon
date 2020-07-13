@@ -9,6 +9,8 @@ github: 'https://github.com/rojasleon/emaily'
 author: 'rojasleon'
 ---
 
+# Emaily
+
 Send emails to people of your interest.
 
 ![Emaily](/projects/emaily.png)

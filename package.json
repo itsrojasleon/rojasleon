@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
+    "@tailwindcss/typography": "^0.1.2",
     "gray-matter": "^4.0.2",
     "marked": "^0.8.2",
     "next": "9.3.1",

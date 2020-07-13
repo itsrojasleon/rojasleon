@@ -942,6 +942,11 @@
   resolved "https://registry.yarnpkg.com/@next/polyfill-nomodule/-/polyfill-nomodule-9.3.1.tgz#d5e12855cbb3d9a9b668fdc133d843a025dbdb6c"
   integrity sha512-4mP4m7cuobjLcjltQzPrv9/b/C/AQR3Q1PwQw/0VLkZTsC8HxCt/gbafXdyDmalDPsp6EEZ6IaHUpuFBz+QBmw==
 
+"@tailwindcss/typography@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.1.2.tgz#41fb4f862b7810e6c8eb03ad2de465b53380f0c0"
+  integrity sha512-Qc52tzH2HGWhgn1IWyqzQ5GuuyXnEWCKflAZDiDHSYHq/Rhapsdlqd4ItqDdYjtpl8+6EC8/tV9nGfG3jifdPg==
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"

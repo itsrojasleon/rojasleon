@@ -9,16 +9,18 @@ github: 'https://github.com/rojasleon/the-coding-interview-bootcamp'
 author: 'rojasleon'
 ---
 
+# The coding interview bootcamp
+
 Ace your next Javascript coding interview by mastering data structures and algorithms.
 
 ![Search Music v2](/projects/the-coding-interview-bootcamp.png)
 
 #### Technologies
 
-- [x] React
-- [x] Gatsby
-  - [x] Gatsby Theme documentation
-- [x] Netlify
+- React
+- Gatsby
+- Gatsby Theme documentation
+- Netlify
 
 #### Links
 
