@@ -1,12 +1,8 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-interface Props {
-  transparent?: boolean;
-}
-
-const Header = (props: Props) => {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const links = [
     { label: 'About', href: '/about' },
@@ -42,14 +38,17 @@ const Header = (props: Props) => {
           <button
             className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
             type="button"
-            onClick={() => setNavbarOpen(!navbarOpen)}>
-            <i className="text-gray-800 fas fa-bars"></i>
+            onClick={() => setIsOpen(!isOpen)}>
+            <i
+              className={`text-gray-800 ${
+                isOpen ? 'fas fa-times' : 'fas fa-bars'
+              }`}></i>
           </button>
         </div>
         <div
           className={
             'lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none' +
-            (navbarOpen ? ' block rounded' : ' hidden')
+            (isOpen ? ' block rounded' : ' hidden')
           }>
           <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
             {links}

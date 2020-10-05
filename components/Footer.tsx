@@ -7,7 +7,9 @@ const Footer = () => {
     {
       iconName: 'fab fa-linkedin-in',
       href: 'https://www.linkedin.com/in/rojasleon'
-    }
+    },
+    { iconName: 'fab fa-youtube', href: 'https://www.youtube.com/channel/UCMmSIbY7b5S1ayAiqD8jt_g/' },
+    
   ].map(({ href, iconName }) => (
     <a key={iconName} href={href} target="_blank" className="text-xl">
       <i

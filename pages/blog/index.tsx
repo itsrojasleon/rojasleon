@@ -2,7 +2,7 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
-import Subtitle from '../../components/Subtitle';
+import Subtitle from '../../components/subtitle';
 import { getResources, Resources } from '../../utils/resources';
 
 interface Blog {

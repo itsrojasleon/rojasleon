@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import Subtitle from '../components/Subtitle';
-import Description from '../components/Description';
+import Subtitle from '../components/subtitle';
+import Description from '../components/description';
 
 const Home = () => {
   const links = [
