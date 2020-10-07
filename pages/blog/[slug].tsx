@@ -7,7 +7,7 @@ const Post = ({ htmlString, data }) => {
   return (
     <>
       <Head>
-        <title>{data.title} | rojasleon</title>
+        <title>{data.title} - rojasleon</title>
         <meta title="description" content={data.description} />
       </Head>
       <div className="prose m-auto w-auto lg:w-8/12">

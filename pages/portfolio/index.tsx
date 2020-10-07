@@ -24,7 +24,7 @@ const Portfolio = ({ projects }: Props) => {
   return (
     <>
       <Head>
-        <title>Portfolio | rojasleon</title>
+        <title>Portfolio - rojasleon</title>
       </Head>
       <Subtitle subtitle="Portfolio" />
       <div className="m-auto grid gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2">

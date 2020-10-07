@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Home | rojasleon</title>
+        <title>Home - rojasleon</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>

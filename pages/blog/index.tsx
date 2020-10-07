@@ -19,7 +19,7 @@ interface Props {
 const Blog = ({ posts }: Props) => (
   <>
     <Head>
-      <title>Blog | rojasleon</title>
+      <title>Blog - rojasleon</title>
     </Head>
     <Subtitle subtitle="Blog" />
     <ul className="list-disc">
