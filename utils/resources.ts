@@ -5,7 +5,8 @@ import marked from 'marked';
 
 export enum Resources {
   Posts = 'posts',
-  Projects = 'projects'
+  Projects = 'projects',
+  Notes = 'notes'
 }
 
 export const getResources = (resource: string) => {

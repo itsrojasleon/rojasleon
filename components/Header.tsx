@@ -7,7 +7,8 @@ const Header = () => {
   const links = [
     { label: 'About', href: '/about' },
     { label: 'Portfolio', href: '/portfolio' },
-    { label: 'Blog', href: '/blog' }
+    { label: 'Blog', href: '/blog' },
+    { label: 'Notes', href: '/notes' }
   ].map(({ label, href }) => (
     <li
       key={label}

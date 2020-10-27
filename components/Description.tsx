@@ -9,7 +9,7 @@ const Description = ({ job, children }: Props) => {
   return (
     <>
       <h2 className="text-2xl text-black mb-3">{job}</h2>
-      <p className="leading-relaxed text-xl text-gray-600 font-light">
+      <p className="leading-relaxed text-xl text-gray-600 font-light mb-8">
         {children}
       </p>
     </>
