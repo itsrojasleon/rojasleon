@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,12 +28,11 @@ const Header = () => {
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <Link href="/">
             <a>
-              <img
-                width="54"
-                height="54"
-                src="https://i.imgur.com/FmUZg5p.png"
-                alt="rojasleon"
+              <Image
                 className="rounded"
+                src="/rojasleon.png"
+                width="55"
+                height="55"
               />
             </a>
           </Link>
