@@ -39,7 +39,7 @@ const Home = () => {
       </Head>
       <>
         <Subtitle subtitle="Hi, I'm Luis!" />
-        <Description job="I'm a software developer.">
+        <Description job="I'm a Software Developer.">
           Right now I'm using React, Node, Typescript, MongoDB/Postgres, Docker
           and Kubernetes to develop apps. I'm learning about the cloud and I
           really would like to learn about ethereum and self driving cars... I
