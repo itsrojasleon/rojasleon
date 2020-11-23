@@ -13,12 +13,9 @@ const Home = () => {
   ].map(({ href, label }, idx) => {
     let separator;
 
-    if (idx !== 4) {
-      separator = ', ';
-    }
-    if (idx === 3) {
-      separator = ' or ';
-    }
+    if (idx !== 4) separator = ', ';
+    if (idx === 3) separator = ' or ';
+
     return (
       <a
         key={idx}
