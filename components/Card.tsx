@@ -24,23 +24,23 @@ const Card = ({
       </Link>
       <div className="px-6 py-4 flex flex-wrap items-center justify-between">
         <a href={github} target="_blank">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-md transition duration-500 ease-in-out">
+          <button className="py-2 px-4 border border-transparent font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             <span>Code</span>
           </button>
         </a>
         {website && (
           <a href={website} target="_blank">
-            <button className="bg-orange-200 hover:bg-orange-300 text-orange-500 font-semibold py-2 px-4 rounded-md transition duration-500 ease-in-out">
+            <button className="py-2 px-4 border border-transparent font-medium rounded-md text-indigo-600 bg-indigo-200 hover:bg-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               <span>Preview</span>
             </button>
           </a>
         )}
       </div>
-      <div className="px-6 py-4">
+      <div className="px-6 py-4 mt-3">
         {languages.map((lan) => (
           <span
             key={lan}
-            className="inline-block text-gray-700 bg-gray-200 rounded-full px-3 py-1 mr-3 text-sm italic">
+            className="inline-block text-black border border-black hover:bg-gray-700 hover:text-white rounded-full px-3 py-2 mr-3 text-sm font-semibold">
             {lan}
           </span>
         ))}
