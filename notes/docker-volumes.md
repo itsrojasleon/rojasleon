@@ -45,3 +45,5 @@ docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app [DOCKER_ID]
 ```
 
 Now if we make any changes to the react project we will the those changes reflected on the screen. That's the beauty of volumes in docker.
+
+But, there's a technology called [Docker Compose](https://docs.docker.com/compose/) to solve this problem in a efficient way
