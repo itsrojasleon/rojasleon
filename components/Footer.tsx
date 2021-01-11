@@ -22,7 +22,7 @@ const Footer = () => {
   return (
     <footer className="relative border-t border-gray-200 flex flex-wrap items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
       <div className="flex flex-col items-center text-black">
-        <span>Juan Luis Rojas León - 2020</span>
+        <span>Juan Luis Rojas León - 2021</span>
         <a
           className="hover:text-blue-600"
           href="mailto:rojasleon.dev@gmail.com"
