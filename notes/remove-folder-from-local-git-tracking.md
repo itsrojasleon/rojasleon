@@ -21,3 +21,5 @@ And if it happen again, here's the git command to stop tracking that folder
 ```shell
 git reset HEAD -- ugly_folder
 ```
+
+This is basically of to undo a folder after a `git add .`
