@@ -7,15 +7,17 @@ author: 'rojasleon'
 
 # Remove folder from local git tracking
 
-I accidentally added a folder to track it using git.
+I accidentally did
 
 ```shell
-git add ugly_folder_that_i_dont_want_to_track
+git add .
 ```
+
+with an specific folder that I did not mean to add
 
 Actually it happend a couple of times. So this note is to stop me doing that.
 And if it happen again, here's the git command to stop tracking that folder
 
 ```shell
-git rm -r --cached path_to_your_ugly_folder
+git reset HEAD -- ugly_folder
 ```
