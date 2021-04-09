@@ -4,6 +4,8 @@ description: 'Create a blog using next js, typescript and tailwindcss'
 date: 'June 27, 2020'
 ---
 
+<link href="http://github.com/yrgoldteeth/darkdowncss/raw/master/darkdown.css" rel="stylesheet"></link>
+
 # Building a blog using Next js, typescript and tailwindcss
 
 Before starting you must know what Next, Typescript and Tailwindcss are.

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Subtitle from '../../components/Subtitle';
 import Description from '../../components/Description';
+import Text from '../../components/Text';
 import { getResources, Resources } from '../../utils/resources';
 
 interface Note {
@@ -31,11 +32,13 @@ const Notes = ({ notes }: Props) => {
       </Description>
       <ul className="list-disc">
         {notes.map((note) => (
-          <li key={note.title}>
+          <li key={note.title} className="flex items-center gap-3">
             <Link href="/notes/[slug]" as={`/notes/${note.route}`}>
               <a className="text-xl hover:underline">{note.title}</a>
             </Link>
-            <span className="text-gray-600 ml-2 font-light">{note.date}</span>
+            <Text className="font-light dark:text-gray-300 antialiased">
+              {note.date}
+            </Text>
           </li>
         ))}
       </ul>

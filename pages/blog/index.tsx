@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
 import Subtitle from '../../components/Subtitle';
+import Text from '../../components/Text';
 import { getResources, Resources } from '../../utils/resources';
 
 interface Blog {
@@ -16,7 +17,7 @@ interface Props {
   posts: Blog[];
 }
 
-const Blog = ({ posts }: Props) => (
+const Blog: React.FC<Props> = ({ posts }) => (
   <>
     <Head>
       <title>Blog - rojasleon</title>
@@ -24,11 +25,13 @@ const Blog = ({ posts }: Props) => (
     <Subtitle subtitle="Blog" />
     <ul className="list-disc">
       {posts.map((post) => (
-        <li key={post.title}>
+        <li key={post.title} className="flex items-center gap-3">
           <Link href="/blog/[slug]" as={`/blog/${post.route}`}>
             <a className="text-xl hover:underline">{post.title}</a>
           </Link>
-          <span className="text-gray-600 ml-2 font-light">{post.date}</span>
+          <Text className="font-light dark:text-gray-300 antialiased">
+            {post.date}
+          </Text>
         </li>
       ))}
     </ul>
