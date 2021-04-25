@@ -42,7 +42,7 @@ const Home = () => {
     return (
       <ul className="list-disc">
         {langs.map((l, i) => (
-          <li>{l}</li>
+          <li key={l}>{l}</li>
         ))}
       </ul>
     );
