@@ -4,29 +4,49 @@ import Subtitle from '../components/Subtitle';
 import Description from '../components/Description';
 
 const Home = () => {
-  const links = [
-    { href: 'https://github.com/rojasleon', label: 'Github' },
-    { href: 'https://codesandbox.io/u/rojasleon', label: 'Codesandbox' },
-    { href: 'https://glitch.com/@rojasleon', label: 'Glitch' },
-    { href: 'https://www.codewars.com/users/rojasleon', label: 'Codewars' },
-    { href: 'https://www.hackerrank.com/rojasleon', label: 'Hackerrank' }
-  ].map(({ href, label }, idx) => {
-    let separator;
+  const renderLinks = () => {
+    const links = [
+      { href: 'https://github.com/rojasleon', label: 'Github' },
+      { href: 'https://codesandbox.io/u/rojasleon', label: 'Codesandbox' },
+      { href: 'https://glitch.com/@rojasleon', label: 'Glitch' },
+      { href: 'https://www.codewars.com/users/rojasleon', label: 'Codewars' },
+      { href: 'https://www.hackerrank.com/rojasleon', label: 'Hackerrank' }
+    ];
 
-    if (idx !== 4) separator = ', ';
-    if (idx === 3) separator = ' or ';
+    return links.map(({ href, label }, i) => {
+      return (
+        <a key={href} className="" href={href} target="_blank">
+          <span className="font-medium hover:underline transition duration-150 ease-in-out">
+            {label}
+          </span>
+          <span className="text-gray-700 dark:text-white">
+            {i === links.length - 1 ? '' : ', '}
+          </span>
+        </a>
+      );
+    });
+  };
+
+  const renderLangs = () => {
+    const langs = [
+      'Javascript',
+      'Typescript',
+      'Go',
+      'React',
+      'Node',
+      'Docker',
+      'Kubernetes',
+      'Etc.'
+    ];
 
     return (
-      <a
-        key={idx}
-        className="text-blue-600 font-medium hover:underline"
-        href={href}
-        target="_blank">
-        {label}
-        {separator}
-      </a>
+      <ul className="list-disc">
+        {langs.map((l, i) => (
+          <li>{l}</li>
+        ))}
+      </ul>
     );
-  });
+  };
 
   return (
     <>
@@ -37,11 +57,11 @@ const Home = () => {
       <>
         <Subtitle subtitle="Hi, I'm Luis!" />
         <Description job="I'm a Software Developer.">
-          Right now I'm using React, Node, Typescript, MongoDB/Postgres, Docker
-          and Kubernetes to develop apps. I'm learning about the cloud and I
-          really would like to learn about ethereum and self driving cars... I
-          know, it's hard, but I'm pretty sure I can deal with that. Please
-          visit my {links} to see what I'm doing right now.
+          I pretty much do Web Development with the following programming
+          languages and technologies: {renderLangs()}I would like to learn more
+          about the Cloud, Machine Learning and Ethereum; I know it can be tough
+          but I'm sure I can deal with that. Please visit my {renderLinks()} to
+          see what I'm doing right now.
         </Description>
       </>
     </>
