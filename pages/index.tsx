@@ -15,7 +15,7 @@ const Home = () => {
 
     return links.map(({ href, label }, i) => {
       return (
-        <a key={href} className="" href={href} target="_blank">
+        <a key={href} href={href} target="_blank">
           <span className="font-medium hover:underline transition duration-150 ease-in-out">
             {label}
           </span>
@@ -41,7 +41,7 @@ const Home = () => {
 
     return (
       <ul className="list-disc">
-        {langs.map((l, i) => (
+        {langs.map((l) => (
           <li key={l}>{l}</li>
         ))}
       </ul>
@@ -56,7 +56,7 @@ const Home = () => {
       </Head>
       <>
         <Subtitle subtitle="Hi, I'm Luis!" />
-        <Description job="I'm a Software Developer.">
+        <Description job="Frontend | Backend | Full Stack Developer">
           I pretty much do Web Development with the following programming
           languages and technologies: {renderLangs()}I would like to learn more
           about the Cloud, Machine Learning and Ethereum; I know it can be tough

@@ -1,4 +1,4 @@
-const Banner: React.FC = ({ children }) => {
+const Banner: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
       <div className="px-2 py-2 w-11/12 xl:w-10/12 lg-w/12 md:w-10/12 m-auto flex lg:justify-between justify-center lg:flex-row flex-col gap-3 items-center text-lg">

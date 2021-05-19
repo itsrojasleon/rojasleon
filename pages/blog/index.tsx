@@ -29,9 +29,9 @@ const Blog: React.FC<Props> = ({ posts }) => (
           <Link href="/blog/[slug]" as={`/blog/${post.route}`}>
             <a className="text-xl hover:underline">{post.title}</a>
           </Link>
-          <Text className="font-light dark:text-gray-300 antialiased">
+          <span className="font-light dark:text-gray-300 antialiased">
             {post.date}
-          </Text>
+          </span>
         </li>
       ))}
     </ul>
