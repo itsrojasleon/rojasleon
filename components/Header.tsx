@@ -14,7 +14,7 @@ const Header = () => {
   ].map(({ label, href }) => (
     <li
       key={label}
-      className="flex items-center hover:bg-gray-200 pt-2 pb-2 border-t border-gray-200 cursor-pointer lg:border-none lg:hover:bg-transparent">
+      className="flex items-center hover:bg-gray-200 dark:hover:bg-gray-800 pt-2 pb-2 border-t border-gray-200 dark:bg-black cursor-pointer lg:border-none lg:hover:bg-transparent">
       <Link href={href}>
         <a className="ml-8 text-black dark:text-white hover:text-indigo-600 focus:outline-none transition duration-150">
           <span className="inline-block">{label}</span>

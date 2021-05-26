@@ -10,7 +10,8 @@ const Home = () => {
       { href: 'https://codesandbox.io/u/rojasleon', label: 'Codesandbox' },
       { href: 'https://glitch.com/@rojasleon', label: 'Glitch' },
       { href: 'https://www.codewars.com/users/rojasleon', label: 'Codewars' },
-      { href: 'https://www.hackerrank.com/rojasleon', label: 'Hackerrank' }
+      { href: 'https://www.hackerrank.com/rojasleon', label: 'Hackerrank' },
+      { href: 'https://platzi.com/p/rojasleon', label: 'Platzi' }
     ];
 
     return links.map(({ href, label }, i) => {
@@ -56,7 +57,7 @@ const Home = () => {
       </Head>
       <>
         <Subtitle subtitle="Hi, I'm Luis!" />
-        <Description job="Frontend | Backend | Full Stack Developer">
+        <Description job="Full Stack Developer">
           I pretty much do Web Development with the following programming
           languages and technologies: {renderLangs()}I would like to learn more
           about the Cloud, Machine Learning and Ethereum; I know it can be tough

@@ -24,13 +24,13 @@ const Card: React.FC<Project> = ({
       </Link>
       <div className="px-6 py-4 flex flex-wrap items-center justify-between">
         <a href={github} target="_blank">
-          <button className="py-2 px-4 border border-transparent font-medium rounded-md text-white bg-indigo-700 hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <button className="py-1 px-4 border border-transparent font-medium rounded-md text-white bg-indigo-700 hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             Code
           </button>
         </a>
         {website && (
           <a href={website} target="_blank">
-            <button className="py-2 px-4 border border-transparent font-medium rounded-md text-white bg-indigo-700 hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <button className="py-1 px-4 border border-transparent font-medium rounded-md text-white bg-indigo-700 hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               Preview
             </button>
           </a>
