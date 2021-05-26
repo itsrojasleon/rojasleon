@@ -1,14 +1,14 @@
 const Footer = () => {
   const links = [
     { iconName: 'fab fa-github', href: 'https://github.com/rojasleon' },
+    {
+      iconName: 'fab fa-youtube',
+      href: 'https://www.youtube.com/channel/UCMmSIbY7b5S1ayAiqD8jt_g'
+    },
     { iconName: 'fab fa-twitter', href: 'https://twitter.com/rojas_leon_' },
     {
       iconName: 'fab fa-linkedin-in',
       href: 'https://www.linkedin.com/in/rojasleon'
-    },
-    {
-      iconName: 'fab fa-youtube',
-      href: 'https://www.youtube.com/channel/UCMmSIbY7b5S1ayAiqD8jt_g'
     }
   ].map(({ href, iconName }) => (
     <a key={iconName} href={href} target="_blank" className="text-xl">
