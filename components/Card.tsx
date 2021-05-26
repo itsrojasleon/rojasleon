@@ -12,7 +12,7 @@ const Card: React.FC<Project> = ({
   website
 }) => {
   return (
-    <div className="bg-white dark:bg-black rounded overflow-hidden shadow-lg mb-6">
+    <div className="bg-white dark:bg-black rounded overflow-hidden shadow-lg mb-6 flex flex-col">
       <Link href="/portfolio/[slug]" as={`/portfolio/${route}`}>
         <a>
           <img className="w-full" src={image} />
@@ -22,21 +22,21 @@ const Card: React.FC<Project> = ({
           </div>
         </a>
       </Link>
-      <div className="px-6 py-4 flex flex-wrap items-center justify-between">
+      <div className="px-6 py-4 flex flex-wrap items-center justify-between flex-grow">
         <a href={github} target="_blank">
-          <button className="py-1 px-4 border border-transparent font-medium rounded-md text-white bg-indigo-700 hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <button className="py-1 px-4 border border-transparent font-medium rounded-md text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700 transition-all">
             Code
           </button>
         </a>
         {website && (
           <a href={website} target="_blank">
-            <button className="py-1 px-4 border border-transparent font-medium rounded-md text-white bg-indigo-700 hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <button className="py-1 px-4 border border-transparent font-medium rounded-md text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700 transition-all">
               Preview
             </button>
           </a>
         )}
       </div>
-      <div className="px-6 py-4 mt-3 border-t dark:border-gray-800">
+      <div className="px-6 py-4 mt-3 border-t dark:border-gray-800 flex-1">
         {languages.map((lan) => (
           <span
             key={lan}
