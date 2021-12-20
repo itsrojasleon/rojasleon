@@ -7,11 +7,10 @@ const Home = () => {
   const renderLinks = () => {
     const links = [
       { href: 'https://github.com/rojasleon', label: 'Github' },
-      { href: 'https://codesandbox.io/u/rojasleon', label: 'Codesandbox' },
-      { href: 'https://glitch.com/@rojasleon', label: 'Glitch' },
-      { href: 'https://www.codewars.com/users/rojasleon', label: 'Codewars' },
-      { href: 'https://www.hackerrank.com/rojasleon', label: 'Hackerrank' },
-      { href: 'https://platzi.com/p/rojasleon', label: 'Platzi' }
+      {
+        href: 'https://www.youtube.com/channel/UCMmSIbY7b5S1ayAiqD8jt_g',
+        label: 'Youtube Channel'
+      }
     ];
 
     return links.map(({ href, label }, i) => {
@@ -34,6 +33,7 @@ const Home = () => {
       'Typescript',
       'Go',
       'React',
+      'React Native',
       'Node',
       'Docker',
       'Kubernetes',
@@ -58,11 +58,11 @@ const Home = () => {
       <>
         <Subtitle subtitle="Hi, I'm Luis!" />
         <Description job="Full Stack Developer">
-          I pretty much do Web Development with the following programming
-          languages and technologies: {renderLangs()}I would like to learn more
-          about the Cloud, Machine Learning and Ethereum; I know it can be tough
-          but I'm sure I can deal with that. Please visit my {renderLinks()} to
-          see what I'm doing right now.
+          I pretty much do Web and Mobile Development and with the following
+          programming languages and technologies: {renderLangs()}I would like to
+          learn more about the Cloud, Machine Learning and Ethereum; I know it
+          can be tough but I'm sure I can deal with that. Please visit my{' '}
+          {renderLinks()} to see what I'm doing right now.
         </Description>
       </>
     </>
