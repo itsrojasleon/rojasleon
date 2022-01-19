@@ -60,9 +60,12 @@ const Home = () => {
         <Description job="Full Stack Developer">
           I pretty much do Web and Mobile Development and with the following
           programming languages and technologies: {renderLangs()}I would like to
-          learn more about the Cloud, Machine Learning and Ethereum; I know it
-          can be tough but I'm sure I can deal with that. Please visit my{' '}
-          {renderLinks()} to see what I'm doing right now.
+          be part of a project where I can build, manage, and scale it. <br />{' '}
+          I'm super interested in continue learning about web technologies (for
+          exmaple web3 is a hot topic right now, don't you think?), AI, Frontend
+          tools, and more programming languages.
+          <br />
+          Please visit my {renderLinks()} to see what I'm doing right now.
         </Description>
       </>
     </>
