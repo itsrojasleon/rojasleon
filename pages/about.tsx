@@ -1,8 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import Text from '../components/Text';
 import Subtitle from '../components/Subtitle';
 import Description from '../components/Description';
-import Text from '../components/Text';
 
 const About = () => {
   return (
@@ -12,7 +13,7 @@ const About = () => {
       </Head>
       <Subtitle subtitle="Hello again!" />
       <Description>
-        <>
+        <Text>
           My name's Juan Luis Rojas León. When I was 15 years old I discovered
           this incredible world of programming, after that I knew what my life
           purpose was going to be. I started programming with Java and PHP but
@@ -25,8 +26,17 @@ const About = () => {
           and of course more job opportunities; that's why I tried Go. And I'm
           100% sure that this text will change in the coming months or years
           because I'm always in "learning mode" and you should too.
-          <Text className="mt-3">See you on the internet! 😊</Text>
-        </>
+        </Text>
+        <Text className="text-red-200">
+          I really enjoy walking, especially with my dogs. So{' '}
+          <Link href="https://www.youtube.com/channel/UCoZmXGOKBs0Zc6izaJhwwJw">
+            <a target="_blank" className="text-blue-500 font-bold">
+              I created a youtube channel
+            </a>
+          </Link>{' '}
+          where you can see what's going on, hope you enjoy it!
+        </Text>
+        <Text>See you on the internet! 😊</Text>
       </Description>
     </>
   );

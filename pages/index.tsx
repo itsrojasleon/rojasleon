@@ -37,7 +37,8 @@ const Home = () => {
       'Node',
       'Docker',
       'Kubernetes',
-      'Etc.'
+      'Serverless',
+      'CDK'
     ];
 
     return (
