@@ -15,7 +15,7 @@ Search your favorite song by Spotify API (v2).
 
 ![Search Music v2](/projects/search-music.png)
 
-#### Technologies
+## Technologies
 
 - React
 - Redux
@@ -29,7 +29,7 @@ Search your favorite song by Spotify API (v2).
 - Mongoose
 - Heroku
 
-#### Links
+## Links
 
 - [Github](https://github.com/rojasleon/search-music 'Github')
 - [Website](https://search-music.herokuapp.com 'Search Music')

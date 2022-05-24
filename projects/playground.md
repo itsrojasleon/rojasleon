@@ -17,7 +17,7 @@ This project is special to me because currently I'm learning Golang and decided 
 
 ![Playground](/projects/playground.png)
 
-#### Technologies
+## Technologies
 
 - [x] Typescript
 - [x] React
@@ -33,7 +33,7 @@ This project is special to me because currently I'm learning Golang and decided 
   - [x] Github Actions
   - [x] Continous Integration and Continous Delivery (CI/CD)
 
-#### Links
+## Links
 
 - [Github](https://github.com/rojasleon/playground 'Github')
 - [Website](https://playground-prod.herokuapp.com 'Playground Website')

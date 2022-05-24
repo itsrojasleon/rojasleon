@@ -15,14 +15,14 @@ Ace your next Javascript coding interview by mastering data structures and algor
 
 ![Search Music v2](/projects/the-coding-interview-bootcamp.png)
 
-#### Technologies
+## Technologies
 
 - React
 - Gatsby
 - Gatsby Theme documentation
 - Netlify
 
-#### Links
+## Links
 
 - [Github](https://github.com/rojasleon/the-coding-interview-bootcamp 'Github')
 - [Website](https://the-coding-interview-bootcamp.netlify.com 'The coding interview bootcamp')

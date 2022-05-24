@@ -20,7 +20,7 @@ Why is this project not working in production? Because it costs money 😅. And 
   <source src="/projects/image-upload/image-upload.mp4" type="video/mp4">
 </video>
 
-#### Technologies
+## Technologies
 
 - [x] React
   - [x] Next.js
@@ -36,6 +36,6 @@ Why is this project not working in production? Because it costs money 😅. And 
   - [x] Supertest
   - [x] Typescript
 
-#### Links
+## Links
 
 - [Github](https://github.com/rojasleon/image-upload 'Github')

@@ -15,7 +15,7 @@ Send emails to people of your interest.
 
 ![Emaily](/projects/emaily.png)
 
-#### Technologies
+## Technologies
 
 - [x] React
   - [x] React Router Dom
@@ -33,7 +33,7 @@ Send emails to people of your interest.
   - [x] MLab.com
 - [x] Heroku
 
-#### Links
+## Links
 
 - [Github](https://github.com/rojasleon/emaily 'Github')
 - [Website](https://server-with-node.herokuapp.com 'Search Music')
