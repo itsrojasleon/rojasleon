@@ -1,8 +1,8 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import Subtitle from '../../components/Subtitle';
 import Description from '../../components/Description';
+import Subtitle from '../../components/Subtitle';
 import Text from '../../components/Text';
 import { getResources, Resources } from '../../utils/resources';
 

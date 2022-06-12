@@ -1,7 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
-import Subtitle from '../components/Subtitle';
 import Description from '../components/Description';
+import Subtitle from '../components/Subtitle';
 
 const Home = () => {
   const renderLinks = () => {

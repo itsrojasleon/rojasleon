@@ -1,9 +1,8 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Text from '../components/Text';
-import Subtitle from '../components/Subtitle';
 import Description from '../components/Description';
+import Subtitle from '../components/Subtitle';
+import Text from '../components/Text';
 
 const About = () => {
   return (

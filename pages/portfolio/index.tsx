@@ -1,8 +1,7 @@
-import React from 'react';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import Subtitle from '../../components/Subtitle';
 import Card from '../../components/Card';
+import Subtitle from '../../components/Subtitle';
 import { getResources, Resources } from '../../utils/resources';
 
 export interface Project {

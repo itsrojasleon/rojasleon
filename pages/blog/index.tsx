@@ -1,7 +1,7 @@
-import React from 'react';
 import { GetStaticProps } from 'next';
-import Link from 'next/link';
 import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
 import Subtitle from '../../components/Subtitle';
 import { getResources, Resources } from '../../utils/resources';
 

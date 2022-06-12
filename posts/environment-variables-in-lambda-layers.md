@@ -27,7 +27,7 @@ export const superHyperDuperFunction = () => {
 };
 ```
 
-`process.env.NODE_ENV` WILL ALWAYS BE `undefined`!
+**process.env.NODE_ENV** WILL ALWAYS BE **undefined**!
 
 Why I can't do that? The answer is quite simple, a layer is just an archive containing additional code, such as libraries, dependencies, or even custom runtimes.
 

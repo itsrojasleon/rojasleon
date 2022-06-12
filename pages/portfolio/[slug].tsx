@@ -1,7 +1,6 @@
-import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
-import { getResource, getPaths, Resources } from '../../utils/resources';
+import { getPaths, getResource, Resources } from '../../utils/resources';
 
 const Project = ({ htmlString, data }) => {
   return (

@@ -2,6 +2,10 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   darkMode: 'media',
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
+  ],
   theme: {
     extend: {
       colors: {
@@ -21,12 +25,12 @@ module.exports = {
         light: {
           css: [
             {
-              color: theme('colors.gray.400'),
+              color: theme('colors.gray.300'),
               '[class~="lead"]': {
                 color: theme('colors.gray.300')
               },
               a: {
-                color: theme('colors.white')
+                color: theme('colors.blue.500')
               },
               strong: {
                 color: theme('colors.white')
