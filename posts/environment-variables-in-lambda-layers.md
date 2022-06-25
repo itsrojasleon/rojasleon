@@ -6,7 +6,7 @@ date: 'May 24, 2022'
 
 # Does environment variables exist within lambda layers?
 
-Short answer: **NO**
+Short answer: **NOT REALLY**
 
 When working with lambda functions we might discover that there're quite slow due its heavy dependencies, it has tons of repetitive code across the lambdas, and soon, we decide to use **lambda layers** to solve the
 previous issues. Great choice!
@@ -19,7 +19,7 @@ In code words, here's why I mean with that:
 export const fn = () => {
   const env = process.env.SOME_ENV_VAR; // DON'T DO THIS WITHIN LAYERS
 
-  if (env === 'production') {
+  if (env === 'something_really_important') {
     return 'A custom logic depending of SOME_ENV_VAR';
   }
 
@@ -33,35 +33,45 @@ Why I can't do that? The answer is quite simple, a layer is just an archive cont
 
 So, how can I handle the case where I need to pass down some env variables within the layer?
 
-My personal recommendation is: **TRY TO DON'T USE THEM**. Layers should run independently without the risk of altering its behavior.
+- Make sure the env variable is defined first in your lambda runtime
 
-## Special case where it's a bit OK to use env vars within lambda layers
+```ts
+// lambdas/create.ts (lambda function)
+import { fn } from 'common-layer';
 
-If you're working with lambda functions and lambda layers in mode development (locally in your personal computer) I found that it's alright and useful to use some environment variables that are available in your local runtime such as **NODE_ENV** (nodejs), **IS_OFFLINE** (serverless offline), etc.
-For example, to setup an AWS service and make it available within your docker local environment or something similar.
+// This validation will make sure `IMPORTANT_ENV_VAR` is defined in the lambda
+// runtime and also inside the layers that have the same variable.
+if (!process.env.IMPORTANT_ENV_VAR) {
+  throw new Error('IMPORTANT_ENV_VAR must be defined');
+}
 
-```js
-// nodejs/index.ts (lambda layer)
-import { S3Client } from '@aws-sdk/client-s3';
-import { Stages } from '../stages';
-
-export const s3Client = new S3Client({
-  ...(process.env.NODE_ENV === Stages.Dev && {
-    forcePathStyle: true,
-    endpoint: 'http://localhost:4569',
-    region: 'us-east-1',
-    credentials: {
-      accessKeyId: 'S3RVER',
-      secretAccessKey: 'S3RVER'
-    }
-  })
-});
+export const handler: APIGatewayProxyHandler = async () => {
+  return { statusCode: 200, body: JSON.stringify({ response: fn() }) };
+};
 ```
 
-Above code will just work in **your computer**, but in the **layer runtime** (within AWS) it won't work. So pay a lot of attention if you want to avoid nasty errors.
+```ts
+// nodejs/index.ts (lambda layer)
+export const fn = () => {
+  // This will be defined if lambda function has defined it before (previous block of code)
+  const importantResponse = process.env.IMPORTANT_ENV_VAR;
+
+  if (importantResponse === 'something_really_important') {
+    return 'A custom logic depending of IMPORTANT_ENV_VAR';
+  }
+
+  return 'Other response';
+};
+```
+
+## Conclusion
+
+If a environment variable is defined in your lambda runtime it will be available inside your lambda layer ✅
+
+But if you try to define an env variable directly inside your layer, it won't be defined 🚫
 
 ## Final words
 
-[I made a simple project to replicate mentioned behavior using Typescript, and the conclusion is that... it does not work, have a look](https://github.com/rojasleon/simple-ts-lambda-layer). Hopefully you find it useful, and if you get stuck feel free contact me to support you.
+[I made a simple project to replicate mentioned behavior using Typescript, and the conclusion is that... it does not work, have a look](https://github.com/rojasleon/simple-ts-lambda-layer). Hopefully you find it useful.
 
 Enjoy!
