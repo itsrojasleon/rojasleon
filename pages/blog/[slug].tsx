@@ -3,13 +3,15 @@ import Head from 'next/head';
 import { getPaths, getResource, Resources } from '../../utils/resources';
 
 const Post = ({ htmlString, data }) => {
+  console.log(data);
+
   return (
     <>
       <Head>
         <title>{data.title} - rojasleon</title>
         <meta title="description" content={data.description} />
       </Head>
-      <div className="prose dark:prose-light m-auto">
+      <div className="prose dark:prose-invert prose-md m-auto prose-code:after:content-none prose-code:before:content-none prose-code:p-1 prose-code:rounded-md">
         <div dangerouslySetInnerHTML={{ __html: htmlString }} />
       </div>
     </>

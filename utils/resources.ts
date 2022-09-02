@@ -1,7 +1,10 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import { marked } from 'marked';
+import markdownIt from 'markdown-it';
+import highlightjs from 'markdown-it-highlightjs';
 import path from 'path';
+
+const md = markdownIt().use(highlightjs);
 
 export enum Resources {
   Posts = 'posts',
@@ -32,7 +35,8 @@ export const getResource = (resource: string, slug: string[] | string) => {
     .toString();
 
   const parsedMarkdown = matter(markdownWithMetadata);
-  const htmlString = marked(parsedMarkdown.content);
+  const htmlString = md.render(parsedMarkdown.content);
+  // const htmlString = marked(parsedMarkdown.content);
 
   return { htmlString, parsedMarkdown };
 };
