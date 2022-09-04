@@ -14,10 +14,6 @@ previous issues. Great choice!
 But, you need to make sure you don't provide an environment variable directly within your lambda layer when refactoring your project.
 In code words, here's why I mean with that:
 
-`Hello there`
-
-`Hey`
-
 ```ts
 // nodejs/index.ts (lambda layer)
 export const fn = () => {
