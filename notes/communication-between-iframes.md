@@ -14,22 +14,23 @@ Let's assume we're using [create-react-app](https://create-react-app.dev/docs/ge
 ```html
 <!-- public/index.html -->
 <html>
-<head></head>
-<body>
-  <div id="root"></div>
-</body>
+  <head></head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
 ```
 
 ```html
 <!-- public/test.html -->
 <html>
-<head></head>
-<body>
-  <h1>Hello</h1>
-</body>
+  <head></head>
+  <body>
+    <h1>Hello</h1>
+  </body>
 </html>
 ```
+
 If we add the test.html file as a iframe jsx element we can see the `Hello` getting displayed on the screen.
 
 ```javascript
@@ -39,12 +40,12 @@ If we add the test.html file as a iframe jsx element we can see the `Hello` gett
 
 const App = () => {
   return (
-    <>
+    <div>
       {/* Some elements */}
       <iframe src="/test.html" title="test" />
-    </>
-  )
-}
+    </div>
+  );
+};
 ```
 
 Now we can communicate data between those two pages.

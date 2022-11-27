@@ -33,8 +33,11 @@ const Notes = ({ notes }: Props) => {
       <ul className="list-disc">
         {notes.map((note) => (
           <li key={note.title} className="flex items-center gap-3">
-            <Link href="/notes/[slug]" as={`/notes/${note.route}`}>
-              <a className="text-xl hover:underline">{note.title}</a>
+            <Link
+              href="/notes/[slug]"
+              as={`/notes/${note.route}`}
+              className="text-xl hover:underline">
+              {note.title}
             </Link>
             <Text className="font-light dark:text-gray-300 antialiased">
               {note.date}

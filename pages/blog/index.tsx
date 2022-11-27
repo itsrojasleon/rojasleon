@@ -25,8 +25,11 @@ const Blog: React.FC<Props> = ({ posts }) => (
     <ul className="list-disc">
       {posts.map((post) => (
         <li key={post.title} className="flex items-center gap-3">
-          <Link href="/blog/[slug]" as={`/blog/${post.route}`}>
-            <a className="text-xl hover:underline">{post.title}</a>
+          <Link
+            href="/blog/[slug]"
+            as={`/blog/${post.route}`}
+            className="text-xl hover:underline">
+            {post.title}
           </Link>
           <span className="font-light dark:text-gray-300 antialiased">
             {post.date}
@@ -42,9 +45,9 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      posts: posts.sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-      )
+      posts: posts.sort((a, b) => {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      })
     }
   };
 };

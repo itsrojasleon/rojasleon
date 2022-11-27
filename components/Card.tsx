@@ -14,13 +14,13 @@ const Card: React.FC<Project> = ({
   return (
     <div className="bg-white dark:bg-black rounded overflow-hidden shadow-lg mb-6 flex flex-col">
       <Link href="/portfolio/[slug]" as={`/portfolio/${route}`}>
-        <a>
+        <>
           <img className="w-full" src={image} />
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">{title}</div>
             <Text>{description}</Text>
           </div>
-        </a>
+        </>
       </Link>
       <div className="px-6 py-4 flex flex-wrap items-center justify-between flex-grow">
         <a href={github} target="_blank">

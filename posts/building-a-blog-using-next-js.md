@@ -106,10 +106,10 @@ interface Props {
 }
 
 const Layout = ({ children }: Props) => (
-  <>
+  <div>
     <Header />
     <div className="m-16">{children}</div>
-  </>
+  </div>
 );
 
 export default Layout;
@@ -179,18 +179,18 @@ interface Props {
 }
 
 const Blog = ({ posts }: Props) => (
-  <>
+  <div>
     <h1 className="text-4xl">Blog</h1>
     <ul>
       {posts.map((info) => (
         <li key={info.title}>
           <Link href="/blog/[slug]" as={`/blog/${info.route}`}>
-            <a>{info.title}</a>
+            {info.title}
           </Link>
         </li>
       ))}
     </ul>
-  </>
+  </div>
 );
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -236,7 +236,7 @@ import marked from 'marked';
 
 const Post = ({ htmlString, data }) => {
   return (
-    <>
+    <div>
       <Head>
         <title>{data.title}</title>
         <meta title="description" content={data.description} />
@@ -244,7 +244,7 @@ const Post = ({ htmlString, data }) => {
       <div className="markdown">
         <div dangerouslySetInnerHTML={{ __html: htmlString }} />
       </div>
-    </>
+    </div>
   );
 };
 

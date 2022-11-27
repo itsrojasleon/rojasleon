@@ -21,7 +21,7 @@ interface Props {
 
 const Portfolio = ({ projects }: Props) => {
   return (
-    <>
+    <div>
       <Head>
         <title>Portfolio - rojasleon</title>
       </Head>
@@ -31,7 +31,7 @@ const Portfolio = ({ projects }: Props) => {
           <Card key={info.title} {...info} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
@@ -40,9 +40,9 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      projects: projects.sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-      )
+      projects: projects.sort((a, b) => {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      })
     }
   };
 };

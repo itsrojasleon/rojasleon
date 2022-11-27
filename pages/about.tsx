@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Description from '../components/Description';
 import Subtitle from '../components/Subtitle';
 import Text from '../components/Text';
@@ -28,11 +27,12 @@ const About = () => {
         </Text>
         <Text className="text-red-200">
           I really enjoy walking, especially with my dogs. So{' '}
-          <Link href="https://www.youtube.com/channel/UCoZmXGOKBs0Zc6izaJhwwJw">
-            <a target="_blank" className="text-blue-500 font-bold">
-              I created a youtube channel
-            </a>
-          </Link>{' '}
+          <a
+            href="https://www.youtube.com/channel/UCoZmXGOKBs0Zc6izaJhwwJw"
+            target="_blank"
+            className="text-blue-500 font-bold">
+            I created a youtube channel
+          </a>{' '}
           where you can see what's going on, hope you enjoy it!
         </Text>
         <Text>See you on the internet! 😊</Text>

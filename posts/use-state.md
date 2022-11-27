@@ -39,10 +39,10 @@ const MyComponent = () => {
   };
 
   return (
-    <>
+    <div>
       <input value={value} onChange={handleChange} />
       Here's what you're typing: <strong>{value}</strong>
-    </>
+    </div>
   );
 };
 ```
@@ -60,14 +60,14 @@ const MyComponent = () => {
   };
 
   return (
-    <>
+    <div>
       <input value={value} onChange={handleChange} />
       Here's what you're typing: <strong>{value}</strong>
       <br />
       {historyList.map((list) => (
         <p key={list}>{list}</p>
       ))}
-    </>
+    </div>
   );
 };
 ```

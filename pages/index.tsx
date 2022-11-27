@@ -55,7 +55,7 @@ const Home = () => {
         <title>Home - rojasleon</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <>
+      <div>
         <Subtitle subtitle="Hi, I'm Luis!" />
         <Description job="Full Stack Developer">
           I pretty much do Web and Mobile Development and with the following
@@ -67,7 +67,7 @@ const Home = () => {
           <br />
           Please visit my {renderLinks()} to see what I'm doing right now.
         </Description>
-      </>
+      </div>
     </>
   );
 };
