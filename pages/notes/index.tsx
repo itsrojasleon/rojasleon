@@ -32,7 +32,7 @@ const Notes = ({ notes }: Props) => {
       </Description>
       <ul className="list-disc">
         {notes.map((note) => (
-          <li key={note.title} className="flex items-center gap-3">
+          <li key={note.title} className="flex items-center gap-3 mb-1">
             <Link
               href="/notes/[slug]"
               as={`/notes/${note.route}`}

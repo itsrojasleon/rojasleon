@@ -13,7 +13,7 @@ const Footer = () => {
   ].map(({ href, iconName }) => (
     <a key={iconName} href={href} target="_blank" className="text-xl">
       <i
-        className={`text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-500 mr-5 cursor-pointer ${iconName}`}></i>
+        className={`text-black dark:text-white hover:text-zinc-700 dark:hover:text-zinc-500 mr-5 cursor-pointer ${iconName}`}></i>
     </a>
   ));
 
@@ -22,7 +22,7 @@ const Footer = () => {
       <div className="flex flex-col items-center">
         <span>Juan Luis Rojas León - {new Date().getFullYear()}</span>
         <a
-          className="hover:text-blue-600"
+          className="hover:text-zinc-400"
           href="mailto:rojasleon.dev@gmail.com"
           rel="nofollow">
           rojasleon.dev@gmail.com

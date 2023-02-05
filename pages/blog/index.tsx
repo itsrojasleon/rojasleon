@@ -24,7 +24,7 @@ const Blog: React.FC<Props> = ({ posts }) => (
     <Subtitle subtitle="Blog" />
     <ul className="list-disc">
       {posts.map((post) => (
-        <li key={post.title} className="flex items-center gap-3">
+        <li key={post.title} className="flex items-center gap-3 mb-1">
           <Link
             href="/blog/[slug]"
             as={`/blog/${post.route}`}
