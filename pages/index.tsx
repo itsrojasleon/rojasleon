@@ -19,7 +19,7 @@ const Home = () => {
             {label}
           </span>
           <span className="text-gray-700 dark:text-white">
-            {i === links.length - 1 ? '' : ', '}
+            {i === links.length - 1 ? '' : ' | '}
           </span>
         </a>
       );
@@ -28,16 +28,14 @@ const Home = () => {
 
   const renderLangs = () => {
     const langs = [
-      'Javascript',
-      'Typescript',
-      'Go',
-      'React',
-      'React Native',
-      'Node',
+      'NodeJS - Typescript',
+      'React / React Native - Typescript',
       'Docker',
       'Kubernetes',
+      'AWS',
       'Serverless',
-      'CDK'
+      'CDK',
+      "Go (haven't used it in a serious project yet)"
     ];
 
     return (
@@ -59,13 +57,25 @@ const Home = () => {
         <Subtitle subtitle="Hi, I'm Luis!" />
         <Description job="Full Stack Developer">
           I pretty much do Web and Mobile Development and with the following
-          programming languages and technologies: {renderLangs()}I would like to
-          be part of a project where I can build, manage, and scale it. <br />{' '}
-          I'm super interested in continue learning about web technologies (for
-          exmaple web3 is a hot topic right now, don't you think?), AI, Frontend
-          tools, and more programming languages.
+          programming languages and technologies: {renderLangs()}
           <br />
-          Please visit my {renderLinks()} to see what I'm doing right now.
+          I'd like to be part of a team that is working on a product that is
+          amazing and that is helping people to solve their problem, now I'm in
+          a great team creating electronic invoicing solutions for Latin America
+          at scale.
+          <br />
+          I'm always looking for new challenges that push me really hard to
+          learn new things and to improve my skills. Also a funny fact about me
+          is that I love learning new cultures, new slang words and new
+          languages.
+          <br />
+          Please visit my {renderLinks()} to see what I'm doing right now or ask
+          me directly on{' '}
+          <a
+            className="hover:cursor-pointer font-semibold"
+            href="https://x.com/rojas_leon_">
+            Twitter
+          </a>{' '}
         </Description>
       </div>
     </>

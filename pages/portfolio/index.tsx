@@ -25,7 +25,7 @@ const Portfolio = ({ projects }: Props) => {
       <Head>
         <title>Portfolio - rojasleon</title>
       </Head>
-      <Subtitle subtitle="Portfolio" />
+      <Subtitle subtitle="Portfolio (I'll update this page in a bit since I've got more experience)" />
       <div className="m-auto grid gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         {projects.map((info) => (
           <Card key={info.title} {...info} />
