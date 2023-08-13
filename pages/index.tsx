@@ -35,7 +35,7 @@ const Home = () => {
       'AWS',
       'Serverless',
       'CDK',
-      "Go (haven't used it in a serious project yet)"
+      "Go (haven't used it in a serious project yet, but I'm willig to do it)"
     ];
 
     return (
