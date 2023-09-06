@@ -60,14 +60,15 @@ const Home = () => {
           programming languages and technologies: {renderLangs()}
           <br />
           I'd like to be part of a team that is working on a product that is
-          amazing and that is helping people to solve their problem, now I'm in
+          amazing and that is helping people to solve their problems, now I'm in
           a great team creating electronic invoicing solutions for Latin America
           at scale.
           <br />
           I'm always looking for new challenges that push me really hard to
           learn new things and to improve my skills. Also a funny fact about me
           is that I love learning new cultures, new slang words and new
-          languages.
+          languages. So If you have some super-local-hood words or phrases,
+          please let me know 😝!
           <br />
           Please visit my {renderLinks()} to see what I'm doing right now or ask
           me directly on{' '}
