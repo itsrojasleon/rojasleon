@@ -8,8 +8,7 @@ const md = markdownIt().use(highlightjs);
 
 export enum Resources {
   Posts = 'posts',
-  Projects = 'projects',
-  Notes = 'notes'
+  Projects = 'projects'
 }
 
 export const getResources = (resource: string) => {
