@@ -35,7 +35,6 @@ export const getResource = (resource: string, slug: string[] | string) => {
 
   const parsedMarkdown = matter(markdownWithMetadata);
   const htmlString = md.render(parsedMarkdown.content);
-  // const htmlString = marked(parsedMarkdown.content);
 
   return { htmlString, parsedMarkdown };
 };
