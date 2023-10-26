@@ -30,12 +30,11 @@ const Home = () => {
     const langs = [
       'NodeJS - Typescript',
       'React / React Native - Typescript',
-      'Docker',
-      'Kubernetes',
       'AWS',
       'Serverless',
       'CDK',
-      "Go (haven't used it in a serious project yet, but I'm willig to do it)"
+      'Docker',
+      'Kubernetes'
     ];
 
     return (
