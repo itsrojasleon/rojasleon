@@ -6,9 +6,9 @@ date: 'February 10, 2024'
 
 # Flowing Data - Node streams meet S3 for massive uploads
 
-We're working in a company that handles social events; we are in charge of a microservice called **users**, currently we have a simple logic that registers users one by one but we're experiencing a high traffic and our API is failing due we're reaching some AWS service limits.
-After realizing our microservice is in pain and receiving feedback from our clients, we decided to scale up the service by adding a **batch user registration** logic.
-The idea is simple: **Allow us and our clients to upload a substantial amount of users data in a single operation through our scalable and resilient API**.
+We're working in a company that handles social events; we are in charge of a microservice called **event planner**, currently we have a simple logic that registers social events data one by one but we're experiencing a high traffic and our API is failing due we're reaching some AWS service limits.
+After realizing our microservice is in pain and receiving feedback from our clients, we decided to scale up the service by adding a **batch registration** logic.
+The idea is simple: **Allow us and our clients to upload a substantial amount of social events data in a single operation through our scalable and resilient API**.
 
 In this blog I will explain to you only the **validation** process because really my purpose is to show you how to handle huge files from s3 using node streams.
 
@@ -18,7 +18,7 @@ In this blog I will explain to you only the **validation** process because reall
 
 1. User sends a POST request to our `create-presigned-url` endpoint
 2. Will receive an s3 `presigned POST URL`
-3. They grab their csv file containing users and start the upload to given URL
+3. They grab their csv file containing social events and start the upload to given URL
 4. The s3 bucket will be pending of previous upload and when it detects it's already there, it will emit an `event notification` to be sent to a `sqs queue` (this queue will have a dlq to catch failure messages)
 5. A lambda will `poll` messages from the queue so it can start the validation process
 
@@ -30,7 +30,7 @@ Using previous services [API GW](https://aws.amazon.com/api-gateway/), [Lambda](
   - Remember, we need to build a resilient app.
   - What would happen if something goes wrong with the lambda and we haven't even started the validation process? Well, we would find ourselves in a challenging situation because the event could be lost.
   - So by putting a queue we're saying: `if something goes wrong with this proces let's catch that error and retry after some time`.
-- Also another common question is `why not just passing the user info within the body request as an array?`
+- Also another common question is `why not just passing the social events info within the body request as an array?`
   - Take a look at this [example](https://github.com/rojasleon/aws-experiments/tree/main/lambda-max-payload)
   - By default lambda can handle up to [6MB](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html) of data request, so we're a bit limited in the amount of data the user can pass to us. Remember, we must be extremely huge!
 
