@@ -6,6 +6,8 @@ date: 'February 10, 2024'
 
 # Flowing Data - Node streams meet S3 for massive uploads
 
+- [Github code](https://github.com/rojasleon/rojasleon-code/tree/main/scalable-s3-uploads)
+
 We're working in a company that handles social events; we are in charge of a microservice called **event planner**, currently we have a simple logic that registers social events data one by one but we're experiencing a high traffic and our API is failing due we're reaching some AWS service limits.
 After realizing our microservice is in pain and receiving feedback from our clients, we decided to scale up the service by adding a **batch registration** logic.
 The idea is simple: **Allow us and our clients to upload a substantial amount of social events data in a single operation through our scalable and resilient API**.
