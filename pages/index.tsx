@@ -29,12 +29,11 @@ const Home = () => {
   const renderLangs = () => {
     const langs = [
       'NodeJS - Typescript',
-      'React / React Native - Typescript',
+      'React | React Native - Typescript',
       'AWS',
       'Serverless',
       'CDK',
-      'Docker',
-      'Kubernetes'
+      'Docker'
     ];
 
     return (
@@ -53,10 +52,10 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Subtitle subtitle="Hi, I'm Luis!" />
-        <Description job="Full Stack Developer">
-          I pretty much do Web and Mobile Development and with the following
-          programming languages and technologies: {renderLangs()}
+        <Subtitle subtitle="Hi, I'm Juan!" />
+        <Description job="Full stack developer">
+          I primarily focus on frontend and backend development, utilizing the
+          following programming languages and technologies: {renderLangs()}
           <br />
           I'd like to be part of a team that is working on a product that is
           amazing and that is helping people to solve their problems, now I'm in
